@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GameHub Esports</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #101119;
+      color: #f4f4f8;
+    }
+
+    header {
+      padding: 20px 8%;
+      background: #191a25;
+      border-bottom: 2px solid #9c5cff;
+    }
+
+    header h1 { margin: 0; color: #bd8cff; }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 14px;
+    }
+
+    nav a {
+      color: #eee;
+      text-decoration: none;
+    }
+
+    nav a:hover { color: #bd8cff; }
+
+    main {
+      width: min(1100px, 90%);
+      margin: 30px auto;
+    }
+
+    section { margin: 35px 0; }
+
+    h2 { color: #bd8cff; }
+
+    .hero {
+      padding: 35px;
+      border-radius: 10px;
+      background: linear-gradient(120deg, #292047, #171821);
+      border: 1px solid #583c86;
+    }
+
+    .hero h2 {
+      margin-top: 0;
+      color: white;
+      font-size: 36px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      margin-top: 10px;
+      background: #9c5cff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: .2s;
+    }
+
+    .button:hover {
+      background: #bd8cff;
+      transform: translateY(-3px);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      padding: 20px;
+      background: #1b1c28;
+      border: 1px solid #303142;
+      border-radius: 8px;
+      transition: .2s;
+    }
+
+    .card:hover {
+      border-color: #9c5cff;
+      transform: translateY(-4px);
+    }
+
+    .card h3 { margin-top: 0; }
+    .muted { color: #a5a6b5; }
+
+    .rank {
+      color: #bd8cff;
+      font-weight: bold;
+    }
+
+    .table-wrap { overflow-x: auto; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #1b1c28;
+    }
+
+    th, td {
+      padding: 13px;
+      text-align: left;
+      border-bottom: 1px solid #303142;
+    }
+
+    th {
+      color: #bd8cff;
+      background: #222331;
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      color: #a5a6b5;
+      background: #191a25;
+    }
+
+    @media (max-width: 700px) {
+      .cards { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 500px) {
+      header { padding: 20px 5%; }
+      .cards { grid-template-columns: 1fr; }
+      .hero { padding: 25px; }
+      .hero h2 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GameHub</h1>
+    <nav>
+      <a href="#games">Games</a>
+      <a href="#tournaments">Tournaments</a>
+      <a href="#teams">Teams</a>
+      <a href="#leaderboard">Leaderboard</a>
+      <a href="#news">News</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="muted">YOUR COMMUNITY. YOUR GAME.</p>
+      <h2>Play together.<br>Compete for glory.</h2>
+      <p>Find your team, follow tournaments, and climb the rankings.</p>
+      <a class="button" href="#tournaments">View tournaments</a>
+    </section>
+
+    <section id="games">
+      <h2>Featured Games</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Valorant</h3>
+          <p class="muted">Tactical shooter · 5v5</p>
+          <p>Team up, sharpen your aim, and compete in the next community cup.</p>
+        </article>
+        <article class="card">
+          <h3>League of Legends</h3>
+          <p class="muted">Strategy · 5v5</p>
+          <p>Build your squad and battle for control of the Rift.</p>
+        </article>
+        <article class="card">
+          <h3>Rocket League</h3>
+          <p class="muted">Sports · 3v3</p>
+          <p>Take your aerial skills to the field in our weekly league.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="tournaments">
+      <h2>Upcoming Tournaments</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Valorant Night Cup</h3>
+          <p class="muted">November 14 · 6:00 PM</p>
+          <p>Team size: 5 players</p>
+        </article>
+        <article class="card">
+          <h3>Rocket League Open</h3>
+          <p class="muted">November 18 · 4:00 PM</p>
+          <p>Team size: 3 players</p>
+        </article>
+        <article class="card">
+          <h3>League Weekend Clash</h3>
+          <p class="muted">November 22 · 5:00 PM</p>
+          <p>Team size: 5 players</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="teams">
+      <h2>Community Teams</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Shadow Wolves</h3>
+          <p class="muted">Valorant · 5 players</p>
+          <p>Captain: Nova</p>
+        </article>
+        <article class="card">
+          <h3>Pixel United</h3>
+          <p class="muted">Rocket League · 3 players</p>
+          <p>Captain: Ace</p>
+        </article>
+        <article class="card">
+          <h3>Rift Runners</h3>
+          <p class="muted">League of Legends · 5 players</p>
+          <p>Captain: Ember</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="leaderboard">
+      <h2>Player Leaderboard</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Player</th>
+              <th>Team</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="rank">#1</td><td>Nova</td><td>Shadow Wolves</td><td>2,450</td></tr>
+            <tr><td class="rank">#2</td><td>Ace</td><td>Pixel United</td><td>2,180</td></tr>
+            <tr><td class="rank">#3</td><td>Ember</td><td>Rift Runners</td><td>1,960</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="news">
+      <h2>Gaming News</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Community Cup registrations are open</h3>
+          <p class="muted">Teams can sign up for the next monthly tournament.</p>
+        </article>
+        <article class="card">
+          <h3>Meet this month’s top players</h3>
+          <p class="muted">See who climbed the leaderboard this week.</p>
+        </article>
+        <article class="card">
+          <h3>New team practice sessions added</h3>
+          <p class="muted">Join a session and get ready for tournament day.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 GameHub Esports Community</p>
+  </footer>
+</body>
+</html>
